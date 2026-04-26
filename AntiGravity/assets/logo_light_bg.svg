@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 3000" width="2400" height="3000">
+    <defs>
+        <linearGradient id="grad_bio" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#00f2ff" />
+            <stop offset="100%" stop-color="#ffd700" />
+        </linearGradient>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;display=swap');
+            .logo-text {
+                font-family: 'Inter', system-ui, -apple-system, sans-serif;
+                font-weight: 800;
+                font-size: 450px;
+                letter-spacing: -0.02em;
+            }
+            .text-reneu { fill: #0a0f1e; }
+            .text-bio { fill: url(#grad_bio); }
+        </style>
+    </defs>
+    <!-- Background is transparent -->
+    <text x="50%" y="50%" class="logo-text" dominant-baseline="middle" text-anchor="middle">
+        <tspan class="text-reneu">RENEU</tspan><tspan class="text-bio">BIO</tspan>
+    </text>
+</svg>

@@ -1,0 +1,318 @@
+:root {
+    --bg-dark: #0a0c10;
+    --card-bg: rgba(22, 27, 34, 0.7);
+    --accent: #00d2ff;
+    --accent-glow: rgba(0, 210, 255, 0.3);
+    --text-primary: #f0f6fc;
+    --text-secondary: #8b949e;
+    --border: rgba(48, 54, 61, 0.8);
+    --success: #238636;
+    --warning: #d29922;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .logo {
+    font-family: 'Outfit', sans-serif;
+}
+
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.badge {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    padding: 4rem 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 120%;
+    background: url('biotech_predictive_bg_1776885347802.png') no-repeat center;
+    background-size: cover;
+    opacity: 0.15;
+    filter: blur(5px);
+    z-index: -1;
+    mask-image: radial-gradient(circle, black 30%, transparent 80%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+.glass {
+    background: var(--card-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 2rem;
+}
+
+.controls h3 {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+
+.control-group {
+    margin-bottom: 2rem;
+}
+
+.control-group label {
+    display: block;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    accent-color: var(--accent);
+}
+
+.control-group .value {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.stage-selector h4 {
+    margin: 2rem 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.small {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.radio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.radio-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-card input {
+    position: absolute;
+    opacity: 0;
+}
+
+.radio-card .content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.radio-card input:checked + .content {
+    border-color: var(--accent);
+    background: rgba(0, 210, 255, 0.05);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.radio-card strong {
+    font-size: 1rem;
+}
+
+.radio-card small {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Visualization Styles */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    text-align: left;
+    padding: 1.5rem;
+}
+
+.stat-card label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-card .value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+    color: #fff;
+}
+
+.stat-card.highlight .value {
+    color: var(--accent);
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.chart-container {
+    height: 350px;
+    padding: 1.5rem;
+}
+
+.pricing-tiers h3 {
+    margin-bottom: 1.5rem;
+}
+
+.tier-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.tier-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tier-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+}
+
+.tier-card h4 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+.tier-card .price {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.tier-card ul {
+    list-style: none;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.tier-card li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.tier-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+.tier-card.active {
+    border-color: var(--accent);
+    background: rgba(0, 210, 255, 0.05);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+@media (max-width: 1200px) {
+    .charts-grid, .tier-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 1000px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
