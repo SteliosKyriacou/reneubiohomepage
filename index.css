@@ -275,22 +275,139 @@ section {
     animation: fadeIn 1s ease forwards;
 }
 
+.aged-hero {
+    padding-top: 12rem;
+}
+
+.aged-hero h1 {
+    font-size: 4.5rem;
+}
+
+@media (max-width: 768px) {
+    .aged-hero {
+        padding-top: 8rem;
+    }
+    .aged-hero h1 {
+        font-size: 2.5rem !important;
+    }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
+    section { padding: 4rem 0; }
+    
     .hero {
         flex-direction: column;
         justify-content: center;
         text-align: center;
         height: auto;
-        padding-top: 10rem;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
     }
-    .hero h1 { font-size: 3rem; }
+    
+    .hero h1 { 
+        font-size: clamp(2.5rem, 8vw, 3.5rem); 
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+        margin: 0 auto 2rem;
+    }
+
     .hero-image {
         position: relative;
         right: 0;
         width: 100%;
-        margin-top: 2rem;
+        margin-top: 3rem;
         transform: none;
         top: 0;
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem !important;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem !important;
+        font-size: 0.9rem;
+    }
+
+    .nav-links a {
+        padding: 0.5rem;
+    }
+
+    .nav-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    /* Platform Section Responsive Fixes */
+    .platform-flex {
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    .platform-image-container {
+        min-height: auto !important;
+        padding: 2rem 0;
+    }
+
+    .platform-image-container img {
+        max-width: 100% !important;
+    }
+
+    .spinning-circle-1 { width: 300px !important; height: 300px !important; }
+    .spinning-circle-2 { width: 340px !important; height: 340px !important; }
+
+    .metric-badge {
+        right: 50% !important;
+        transform: translateX(50%) !important;
+        bottom: -2rem !important;
+        width: max-content;
+    }
+
+    /* Decision Support Fix */
+    .decision-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+    }
+
+    /* Typography adjustments */
+    h1 { font-size: 2.5rem !important; }
+    h2 { font-size: 2.2rem !important; }
+    h3 { font-size: 1.8rem !important; }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
+
+/* Helper Classes for Mobile-First Grids */
+.flex-column-mobile {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+    .flex-column-mobile {
+        flex-direction: column;
     }
 }
