@@ -1,12 +1,21 @@
-/* ReneuBio - AlphaForge Design System */
+/* SAISHO - AlphaForge Design System */
 :root {
+    /* Brand gradient stops, taken from the "ai" ligature in the SAISHO logo
+       (assets/SAISHO-logo.svg, #aiGradient). */
+    --logo-blue-deep: #123E84;
+    --logo-blue: #176FA4;
+    --logo-teal: #20A9B8;
+    --logo-aqua: #2CCDA2;
+    --logo-green: #39EC78;
+
     --bg-color: #0a0f1e;
     --card-bg: rgba(255, 255, 255, 0.05);
-    --primary-color: #00f2ff;
-    --secondary-color: #ffd700;
+    --primary-color: var(--logo-teal);
+    --primary-rgb: 32, 169, 184;
+    --secondary-color: var(--logo-green);
     --text-main: #ffffff;
     --text-muted: #a0a0c0;
-    --accent-gradient: linear-gradient(135deg, #00f2ff 0%, #ffd700 100%);
+    --accent-gradient: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-teal) 35%, var(--logo-aqua) 68%, var(--logo-green) 100%);
     --glass-border: rgba(255, 255, 255, 0.1);
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
@@ -99,7 +108,7 @@ section {
 .hero-image img {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 0 50px rgba(0, 242, 255, 0.3));
+    filter: drop-shadow(0 0 50px rgba(var(--primary-rgb), 0.3));
     mix-blend-mode: screen;
     -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
     mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
@@ -123,7 +132,7 @@ section {
 
 .btn-primary:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+    box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.4);
 }
 
 /* Features/Platform */
@@ -145,7 +154,7 @@ section {
 .card:hover {
     transform: translateY(-10px);
     border-color: var(--primary-color);
-    box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(var(--primary-rgb), 0.1);
 }
 
 .card h3 {

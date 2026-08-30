@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
             }
             draw() {
-                ctx.fillStyle = 'rgba(0, 242, 255, 0.5)';
+                ctx.fillStyle = 'rgba(32, 169, 184, 0.5)';
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fill();
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const p2 = particles[j];
                     const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
                     if (dist < 150) {
-                        ctx.strokeStyle = `rgba(0, 242, 255, ${1 - dist / 150 * 0.5})`;
+                        ctx.strokeStyle = `rgba(32, 169, 184, ${1 - dist / 150 * 0.5})`;
                         ctx.lineWidth = 0.5;
                         ctx.beginPath();
                         ctx.moveTo(p.x, p.y);
