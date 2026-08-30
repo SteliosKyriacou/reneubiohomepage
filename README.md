@@ -5,7 +5,7 @@ Static marketing site for SAISHO, published at **https://www.saisho.ai**.
 ## Deployment
 
 The site is hosted on **GitHub Pages**, served directly from the root of the
-`main` branch. There is no build step — pushing to `main` publishes it, and the
+`main` branch. There is no build step. Pushing to `main` publishes it, and the
 new version is usually live within a minute or two.
 
 The **`CNAME`** file binds the custom domain. GitHub Pages supports exactly one
@@ -20,7 +20,7 @@ you are deliberately moving the site. DNS for `saisho.ai` lives at GoDaddy, wher
 a `www` CNAME record points to `stelioskyriacou.github.io`.
 
 Because Pages serves the repository root, **every tracked file is publicly
-downloadable** at its path — including anything under `Deck/`. Do not commit
+downloadable** at its path, including anything under `Deck/`. Do not commit
 files you do not want on the open internet.
 
 ## Structure
@@ -38,7 +38,7 @@ files you do not want on the open internet.
 | `Deck/` | Investor and partner documents (not linked from any page) |
 
 `roi_model.html` and `test1/index.html` are not linked from the site's
-navigation — they are reachable only by direct URL.
+navigation; they are reachable only by direct URL.
 
 ### Logo
 
