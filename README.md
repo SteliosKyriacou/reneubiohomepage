@@ -31,6 +31,7 @@ files you do not want on the open internet.
 | `aged_biology.html` | The Aged Biology Edge page, linked from the nav |
 | `roi_model.html` | AlphaForge Impact Model calculator (uses `model.js`) |
 | `test1/index.html` | Scratch page with a GCP iframe embed |
+| `isomorphiclabs/index.html` | Client-side redirect to the AlphaForge demo host |
 | `index.css` | Stylesheet for all pages |
 | `main.js` | Animated background canvas and scroll reveals |
 | `model.js` | ROI calculator logic |
@@ -39,6 +40,15 @@ files you do not want on the open internet.
 
 `roi_model.html` and `test1/index.html` are not linked from the site's
 navigation; they are reachable only by direct URL.
+
+### Redirects
+
+GitHub Pages cannot issue server-side 301s, so redirects are static pages
+that bounce the browser client-side (`location.replace()`, with a meta
+refresh fallback and a manual link). `isomorphiclabs/index.html` sends
+`/isomorphiclabs` to `http://34.169.179.175:4003/`. That target is a bare
+IP served over plain HTTP, so the destination is not encrypted and the
+link breaks if the instance IP changes.
 
 ### Logo
 

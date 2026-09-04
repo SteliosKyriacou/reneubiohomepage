@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting | SAISHO</title>
+    <meta name="robots" content="noindex">
+    <!--
+      GitHub Pages serves static files only, so it cannot issue a server-side
+      301. This page redirects client-side: location.replace() fires first (it
+      does not leave an entry in the back-button history), with a meta refresh
+      as the fallback when JavaScript is unavailable, and a manual link if
+      both are blocked.
+    -->
+    <meta http-equiv="refresh" content="0; url=http://34.169.179.175:4003/">
+    <link rel="stylesheet" href="../index.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        .redirect-card p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-card">
+        <img src="../assets/SAISHO-logo.svg" alt="SAISHO" style="height: 48px; width: auto; margin: 0 auto 2rem; display: block;">
+        <p>Taking you to the AlphaForge demo.</p>
+        <a href="http://34.169.179.175:4003/" class="btn btn-primary">Continue</a>
+    </div>
+    <script>
+        location.replace('http://34.169.179.175:4003/');
+    </script>
+</body>
+</html>
