@@ -52,11 +52,18 @@ link breaks if the instance IP changes.
 
 ### Logo
 
-`assets/SAISHO-logo.svg` is the file the pages actually use. It is identical to
-`assets/SAISHO-logo-black-background.svg` except that the opaque black
-background rectangle has been removed, so the mark composites cleanly against
-the site's `#0a0f1e` background. Keep both: the black-background version is the
-original source asset.
+`assets/saisho-logo-black-bg.svg` is the pristine source asset, exactly as
+supplied: black background intact, C2PA provenance manifest intact.
+
+`assets/SAISHO-logo.svg` is the file the pages actually reference. It is the
+same artwork with the opaque black background rectangle removed, so the mark
+composites cleanly against the site's `#0a0f1e` background, and with the C2PA
+manifest stripped (editing the file invalidates its signature, so a broken
+manifest would be worse than none). Keep both.
+
+The brand palette in `index.css` is derived from this logo's `#saishoGradient`
+stops. If the logo is replaced again, update those `--logo-*` variables to
+match, along with `--primary-rgb` and the `rgba()` values in `main.js`.
 
 ## Local preview
 

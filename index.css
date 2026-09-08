@@ -1,21 +1,20 @@
 /* SAISHO - AlphaForge Design System */
 :root {
-    /* Brand gradient stops, taken from the "ai" ligature in the SAISHO logo
-       (assets/SAISHO-logo.svg, #aiGradient). */
-    --logo-blue-deep: #123E84;
-    --logo-blue: #176FA4;
-    --logo-teal: #20A9B8;
-    --logo-aqua: #2CCDA2;
-    --logo-green: #39EC78;
+    /* Brand gradient stops, taken from the ring mark in the SAISHO logo
+       (assets/SAISHO-logo.svg, #saishoGradient). */
+    --logo-blue: #1b4f91;
+    --logo-teal: #18a8c0;
+    --logo-aqua: #2fc0a8;
+    --logo-green: #2fd88f;
 
     --bg-color: #0a0f1e;
     --card-bg: rgba(255, 255, 255, 0.05);
     --primary-color: var(--logo-teal);
-    --primary-rgb: 32, 169, 184;
+    --primary-rgb: 24, 168, 192;
     --secondary-color: var(--logo-green);
     --text-main: #ffffff;
     --text-muted: #a0a0c0;
-    --accent-gradient: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-teal) 35%, var(--logo-aqua) 68%, var(--logo-green) 100%);
+    --accent-gradient: linear-gradient(135deg, var(--logo-blue) 0%, var(--logo-teal) 45%, var(--logo-aqua) 75%, var(--logo-green) 100%);
     --glass-border: rgba(255, 255, 255, 0.1);
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
