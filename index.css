@@ -69,7 +69,12 @@ section {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    /* min-height rather than a fixed 100vh: the partners banner now sits
+       above the hero, so a full viewport height here would push the CTA
+       below the fold. height: auto keeps tall content from being clipped
+       by the overflow: hidden below. */
+    min-height: calc(100vh - 11rem);
+    height: auto;
     display: flex;
     align-items: center;
     position: relative;
@@ -167,7 +172,7 @@ section {
 /* Partner Slider */
 .partners-container {
     overflow: hidden;
-    padding: 2rem 0;
+    padding: 0.5rem 0;
     white-space: nowrap;
     position: relative;
 }
