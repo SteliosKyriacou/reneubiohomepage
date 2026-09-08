@@ -28,20 +28,27 @@ files you do not want on the open internet.
 | Path | Purpose |
 | --- | --- |
 | `index.html` | Main landing page |
-| `aged_biology.html` | The Aged Biology Edge page, no longer linked from the nav |
-| `roi_model.html` | AlphaForge Impact Model calculator (uses `model.js`) |
 | `test1/index.html` | Scratch page with a GCP iframe embed |
 | `isomorphiclabs/index.html` | Client-side redirect to the AlphaForge demo host |
 | `index.css` | Stylesheet for all pages |
 | `main.js` | Animated background canvas and scroll reveals |
-| `model.js` | ROI calculator logic |
-| `assets/` | Logos, platform imagery, and team photos |
+| `assets/` | Logos, team photos, and the social preview card |
 | `Deck/` | Investor and partner documents (not linked from any page) |
 
-`aged_biology.html`, `roi_model.html` and `test1/index.html` are not linked
-from the site's navigation; they are reachable only by direct URL. They still
-carry the older discovery-platform framing rather than the rating-agency
-positioning on the home page.
+`test1/index.html` is not linked from the site's navigation; it is reachable
+only by direct URL.
+
+`aged_biology.html` and `roi_model.html` were removed: they carried the older
+discovery-platform framing that contradicted the rating-agency positioning.
+Both URLs now return 404. They remain in history on the `saisho-prerating`
+branch.
+
+### Social preview
+
+`index.html` carries Open Graph and Twitter card tags. `assets/social-card.png`
+is the 1200x630 preview image; it is a raster file because LinkedIn, Slack and
+X do not render SVG. If the headline on the home page changes, regenerate the
+card so the two do not disagree.
 
 ### Redirects
 
