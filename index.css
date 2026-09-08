@@ -84,15 +84,15 @@ section {
 .hero-content {
     position: relative;
     z-index: 10;
-    max-width: 700px;
+    max-width: 900px;
 }
 
 .hero h1 {
     /* 3.6rem rather than 4.5rem: the headline is a full sentence, and the
        larger size orphaned its last word. The mobile clamp in the
        max-width: 992px block still overrides this. */
-    font-size: 3.6rem;
-    line-height: 1.1;
+    font-size: 2.6rem;
+    line-height: 1.15;
     margin-bottom: 1.5rem;
 }
 
